@@ -5,25 +5,91 @@ body, html { height: 100%; }
 body   { background: #666; }
 
 .warp { 
-	width: 640px; height: 960px; 
+	width: 320px; height: 480px; 
 	position: relative; margin: 0 auto; background: #fff; 
 	overflow: hidden;
+	font-family: sans-serif;
 	}
 header, section, footer { width: 100%; }
 
 /* HEADER */
 header {
-	height: 20px; background: rgba(0,0,0,.3);
+	height: 20px; background: #1976D2;
 	}
 
 /* SECTION */
 section	{
-	height: 420px; background: rgba(0,0,0,.5);
+	height: 420px; background: #2196F3;
+	color: white;
 	}
+
+.texte_defi_du_jour{
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.texte_defi_du_jour p{
+	font-size: 16pt;
+	position: absolute;
+	top: 100px;
+}
+
+.defi_du_jour-titre{	
+	font-size: 20pt;
+	text-transform: uppercase;
+}
+
+.defi_du_jour{
+	position: relative;
+	padding: 20px; 
+	height: 340px;
+}
+
+.defi_du_jour-bouton{
+	/*text-indent: -99999px;*/
+
+	color: white;
+	font-size: 30pt;
+
+	display: block;
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+
+	margin-left: 47px;
+	position: absolute;
+	bottom: 10px;
+
+	background: #FF5722;
+}
+
+
+.refuser_defi_jour{
+	right: 67px;
+}
+
+.defis_amis{
+	padding: 10px;
+	text-align: center;
+	border-top: 1px solid white;
+}
+
+.defis_amis-bouton{
+	text-indent: -99999px;
+
+	display: block;
+	width: 70px;
+	height: 35px;
+	border-radius: 10%;
+	margin: 0 auto 10px auto;
+
+	background: #FF5722;
+}
 
 /* FOOTER */
 footer {
-	height: 40px; background: rgba(0,0,0,.3);
+	height: 40px; background: white;
 	}
 
 
@@ -31,3 +97,4 @@ footer {
 @media (max-width: 600px) {
 	.banana { width: 300px; height: 400px; }
 }
+
