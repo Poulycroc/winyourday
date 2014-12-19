@@ -23,67 +23,89 @@ section	{
 	color: white;
 	}
 
-.texte_defi_du_jour{
-	position: relative;
-	text-align: center;
-	margin: 0 auto;
+	/* Défi du jour */
+
+		.texte_defi_du_jour{
+			position: relative;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		.texte_defi_du_jour p{
+			font-size: 16pt;
+			position: absolute;
+			top: 100px;
+		}
+
+		.defi_du_jour-titre{	
+			font-size: 20pt;
+			text-transform: uppercase;
+		}
+
+		.defi_du_jour{
+			position: relative;
+			padding: 20px; 
+			height: 340px;
+		}
+
+		.defi_du_jour-bouton{
+			/*text-indent: -99999px;*/
+
+			color: white;
+			font-size: 30pt;
+
+			display: block;
+			width: 70px;
+			height: 70px;
+			border-radius: 100%;
+
+			margin-left: 47px;
+			position: absolute;
+			bottom: 10px;
+
+			background: #FF5722;
+		}
+
+
+		.refuser_defi_jour{
+			right: 67px;
+		}
+
+		.defis_amis{
+			padding: 10px;
+			text-align: center;
+			border-top: 1px solid white;
+		}
+
+		.defis_amis-bouton{
+			text-indent: -99999px;
+
+			display: block;
+			width: 70px;
+			height: 35px;
+			border-radius: 10%;
+			margin: 0 auto 10px auto;
+
+			background: #FF5722;
+		}
+
+	/* Photos défi du jour */
+
+.photos_defi_du_jour{
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
-.texte_defi_du_jour p{
-	font-size: 16pt;
-	position: absolute;
-	top: 100px;
+.photos_defi_du_jour_rempli{
+	width: 160px;
+	height: 160px;
+	float: left;
 }
 
-.defi_du_jour-titre{	
-	font-size: 20pt;
-	text-transform: uppercase;
-}
-
-.defi_du_jour{
-	position: relative;
-	padding: 20px; 
-	height: 340px;
-}
-
-.defi_du_jour-bouton{
-	/*text-indent: -99999px;*/
-
-	color: white;
-	font-size: 30pt;
-
-	display: block;
-	width: 70px;
-	height: 70px;
-	border-radius: 100%;
-
-	margin-left: 47px;
-	position: absolute;
-	bottom: 10px;
-
-	background: #FF5722;
-}
-
-
-.refuser_defi_jour{
-	right: 67px;
-}
-
-.defis_amis{
-	padding: 10px;
-	text-align: center;
-	border-top: 1px solid white;
-}
-
-.defis_amis-bouton{
+.photo_defi_du_jour_ajouter{
 	text-indent: -99999px;
-
-	display: block;
-	width: 70px;
-	height: 35px;
-	border-radius: 10%;
-	margin: 0 auto 10px auto;
-
+	width: 160px;
+	height: 160px;
 	background: #FF5722;
 }
 
