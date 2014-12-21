@@ -21,9 +21,18 @@ header {
 section	{
 	height: 420px; background: #2196F3;
 	color: white;
+	-webkit-transition: all .3s ease-out;
 	}
 
 	/* Défi du jour */
+
+		.defi_du_jour_accueil
+
+		.defi_du_jour{
+			position: relative;
+			padding: 20px; 
+			height: 340px;
+		}
 
 		.texte_defi_du_jour{
 			position: relative;
@@ -31,21 +40,18 @@ section	{
 			margin: 0 auto;
 		}
 
-		.texte_defi_du_jour p{
-			font-size: 16pt;
-			position: absolute;
-			top: 100px;
-		}
-
 		.defi_du_jour-titre{	
 			font-size: 20pt;
 			text-transform: uppercase;
 		}
 
-		.defi_du_jour{
-			position: relative;
-			padding: 20px; 
-			height: 340px;
+		.description_defi_du_jour{
+			font-size: 16pt;
+			position: absolute;
+			top: 80px;
+			background: #21AFFF;
+			border-radius: 5%;
+			padding: 10px;
 		}
 
 		.defi_du_jour-bouton{
@@ -91,23 +97,36 @@ section	{
 
 	/* Photos défi du jour */
 
-.photos_defi_du_jour{
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
+		.photos_defi_du_jour{
+			overflow-y: scroll;
+			overflow-x: hidden;
 
-.photos_defi_du_jour_rempli{
-	width: 160px;
-	height: 160px;
-	float: left;
-}
+			-webkit-transition: all .5s ease-out;
+			-webkit-transform: translateY(100%);
+		}
 
-.photo_defi_du_jour_ajouter{
-	text-indent: -99999px;
-	width: 160px;
-	height: 160px;
-	background: #FF5722;
-}
+		.photos_defi_du_jour_rempli{
+			width: 160px;
+			height: 160px;
+			float: left;
+		}
+
+		.photo_defi_du_jour_ajouter{
+			text-indent: -99999px;
+			width: 160px;
+			height: 160px;
+			background: #FF5722;
+		}
+
+	/* Button Action */
+
+		.photos_defi_du_jour.photos--open{
+			-webkit-transform: translateY(-100%);
+		}
+
+		.defi_du_jour_accueil.photos--open{
+			-webkit-transform: scale(.1);
+		}
 
 /* FOOTER */
 footer {
