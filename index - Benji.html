@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/font.css"  />
 	
-	<link rel="stylesheet" type="text/css" href="assets/css/main - Benji_base.css"  />
+	<link rel="stylesheet" type="text/css" href="assets/css/main - Benji2.css"/>
 
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	<script src="assets/js/jquery-transit.js"></script>
@@ -26,40 +26,56 @@
 		
 		<header>
 
-			<button class="bouton_retour">Retour</button>
+			
 
 		</header>
 	
-		<section class="defi_du_jour_accueil">
+		<section class="defis">
 
-			<div class="defi_du_jour">
+			<h1 class="defi_du_jour__contenu--titre">Défi du jour</h1>
 
-				<div class="texte_defi_du_jour">
+			<ul class='navigation_defis--liste'>
 
-					<h1 class="defi_du_jour-titre">Défi du jour</h1>
+				<li class="navigation__defis--element--recus"><a href="#" class='navigation__defis--element'>Reçus</a></li>
 
-					<p class="description_defi_du_jour">Prenez un selfie spécial noël (bonnet de père noël, cornes de cerf, pull en laine, ...) !</p>
+				<li class="navigation__defis--element--envoyes"><a href="#" class='navigation__defis--element'>Envoyés</a></li>
+
+				<li class="navigation__defis--element--creer"><a href="#" class='navigation__defis--element'>Créer</a></li>
+
+			</ul>
+
+			<div class='defi_du_jour'>
+
+				<div class="defi_du_jour__contenu">
+
+					<p class="defi_du_jour__contenu--description">Prends une photo de toi avec une statue comme si elle était ta meilleure pote.</p>
+
+					<button class="defi_du_jour__bouton defi_du_jour__bouton--refuser">Refuser</button>
+
+					<!-- Le bouton refuser devrait amemner directement vers la page des défis des amis, mais ce n'est pas moi qui l'ai faite -->
+
+					<button class="defi_du_jour__bouton defi_du_jour__bouton--accepter">Accepter</button>
+
+					<button class="bouton__photos_defi">Photos</button>
 
 				</div>
 
-				<button class="defi_du_jour-bouton accepter_defi_jour">X</button>
-				<button class="defi_du_jour-bouton refuser_defi_jour">X</button>
+				<button class="bouton__defis_amis">Défis d'amis</button>
 
-				<button class="bouton_photos_defi">Photos</button>
-
-			</div>
-			<div class="defis_amis">
-
-				<button class="defis_amis-bouton">Défis d'amis</button>
-
-				<p>Défis d'amis</p>
-
-			</div>
+			</div>		
 			
 		</section>
 
 		<section class="photos_defi_du_jour">
 
+			<div class="photos_du_jour__header">
+
+				<h1 class="photos_du_jour__header--titre">Photos du jour</h1>
+
+				<button class="photos_du_jour__header--retour">Retour</button>
+
+			</div>
+
 			<img class="photos_defi_du_jour_rempli" src="assets/img/no-guts-no-glory.jpg" alt="photo défi rempli">
 			<img class="photos_defi_du_jour_rempli" src="assets/img/Bananas.jpg" alt="photo défi rempli">
 			<img class="photos_defi_du_jour_rempli" src="assets/img/Bananas.jpg" alt="photo défi rempli">
@@ -74,7 +90,7 @@
 			<img class="photos_defi_du_jour_rempli" src="assets/img/no-guts-no-glory.jpg" alt="photo défi rempli">
 			<img class="photos_defi_du_jour_rempli" src="assets/img/no-guts-no-glory.jpg" alt="photo défi rempli">
 			
-			<button class="photo_defi_du_jour_ajouter">Ajouter une photo</button>
+			<button class="bouton__ajouter_photo">Ajouter une photo</button>
 
 		</section>
 		

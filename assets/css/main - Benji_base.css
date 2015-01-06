@@ -14,13 +14,13 @@ header, section, footer { width: 100%; }
 
 /* HEADER */
 header {
-	height: 20px; background: #1976D2;
+	height: 20pt; background: #1976D2;
 	}
 
 	/* Page photos */
 
 		.bouton_retour{
-			height: 20px;
+			height: 20pt	;
 			width: 100px;
 			color: white;
 			background: #2196F3;
@@ -43,12 +43,10 @@ section	{
 
 	/* Défi du jour */
 
-		.defi_du_jour_accueil
-
 		.defi_du_jour{
 			position: relative;
 			padding: 20px; 
-			height: 340px;
+			height: 283px;
 		}
 
 		.texte_defi_du_jour{

@@ -1,0 +1,292 @@
+@import url(font.css)  ;
+@import url(reset.css) ;
+
+body, html { height: 100%; }
+body   { background: #F5F5F5; }
+
+.warp { 
+	width: 320px; height: 480px; 
+	position: relative; margin: 0 auto; background: #F5F5F5; 
+	overflow: hidden;
+	font-family: sans-serif;
+	}
+header, section, footer { width: 100%; }
+
+a:visited{
+	color: black;
+}
+
+/* HEADER */
+header {
+	height: 20px; background: #1976D2;
+	}
+
+	/* Page photos */
+
+		
+
+/* SECTION */
+	section	{
+		height: 410px; background: #F5F5F5;
+		color: black;
+		-webkit-transition: all .3s ease-out;
+		}
+
+	.defi_du_jour__contenu--titre{
+		color: #E7483E;
+		font-size: 21pt;
+		text-align: center;
+		padding: 0;
+		display: block;
+		width: 310px;
+		height: 35px;
+		background: white;
+		margin: 5px;
+		margin-top: 0;
+		padding-top: 3px;
+	}
+
+	.navigation_defis--liste{
+		width: 100%;
+		height: 40px;
+	}
+
+	li{
+		width: 100px;
+		height: 100%;
+		float: left;
+		margin-left: 5px;
+		text-align: center;
+		background: white;
+	}
+
+	.navigation__defis--element{
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding-top: 10px;
+	}
+
+	.navigation__defis--element--recus{
+		border-bottom: 2px #FA6D5F solid;
+	}
+
+	.navigation__defis--element--envoyes{
+		border-bottom: 2px #FFA72B solid;
+	}
+
+	.navigation__defis--element--creer{
+		border-bottom: 2px #2FDAFF solid;
+		margin-right: 5px;
+	}
+
+	li:nth-child(1)>a {
+		color: #FA6D5F;
+	}
+
+	li:nth-child(2)>a {
+		color: #FFA72B;
+	}
+
+	li:nth-child(3)>a {
+		color: #2FDAFF;
+	}
+
+
+	/* Défi du jour */
+
+	.defi_du_jour {
+		height: 360px;
+		width: 310px;
+		margin: 5px;
+		}
+
+	.defi_du_jour__contenu{
+		
+		height: 245px;
+		width: 100%;
+		background: white;
+
+		position: relative;
+	}
+
+	.defi_du_jour__contenu--description{
+		font-size: 14pt;
+		width: 230px;
+		line-height: 130%;
+		padding-top: 30px;
+		margin: 0 auto;
+	}
+
+	.defi_du_jour__bouton--refuser{
+		width: 80px;
+		height: 80px;
+		border-radius: 100%;
+		position: absolute;
+		bottom: 15px;
+		left: 65px;
+		background: #E7483E;
+	}
+
+	.defi_du_jour__bouton--accepter{
+		width: 80px;
+		height: 80px;
+		border-radius: 100%;
+		position: absolute;
+		bottom: 15px;
+		right: 65px;
+		background: #00B598;
+	}
+
+	.bouton__photos_defi{
+		color: #E7483E;
+		border: 2px #E7483E solid;
+
+		display: block;
+		width: 150px;
+		height: 50px;
+		border-radius: 20px;
+
+		background: white;
+		position: absolute;
+		bottom: -500px;
+		margin-left: 80px;
+	}
+
+	.bouton__defis_amis{
+		height: 70px;
+		width: 310px;
+		margin-top: 5px;
+		color: white;
+		background: #E7483E;
+		font-size: 16pt;
+	}
+
+/* PHOTOS */
+	img{
+		min-height: 160px;
+		min-width: 160px;
+		max-width: 160px;
+		max-height: 160px;
+		float: left;
+	}
+
+	.photos_defi_du_jour{
+		overflow-y: scroll;
+		overflow-x: hidden;
+
+		-webkit-transition: all .7s ease-in;
+		-webkit-transform: translateY(100%);
+	}
+
+	.photos_du_jour__header{
+		width: 100%;
+		height: 30px;
+		background: white;
+		color: black;
+		position: relative;
+	}
+
+	.photos_du_jour__header--titre{
+		text-align: left;
+		padding-top: 4px;
+		margin-left: 5px;
+		font-size: 16pt;
+		color: #E7483E;
+	}
+
+	.photos_du_jour__header--retour{
+		width: 70px;
+		height: 100%;
+		background: #E7483E;
+		color: white;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.bouton__ajouter_photo{
+		height: 160px;
+		width: 160px;
+		border-radius: 100%;
+		background: white;
+		border: 4px #E7483E solid;
+		color: #E7483E;
+		font-size: 16pt;
+	}
+
+/* Button Action */
+
+		@-webkit-keyframes disappear-gauche{
+			0%{
+				-webkit-transform: translateX(0px);
+				opacity: 1;
+			}
+			100%{
+				-webkit-transform: translateX(-200px);
+				opacity: 0;
+			}
+		}
+
+		@-webkit-keyframes disappear-droite{
+			0%{
+				-webkit-transform: translateX(0px);
+				opacity: 1;
+			}
+			100%{
+				-webkit-transform: translateX(200px);
+				opacity: 0;
+			}
+		}
+
+		.defi_du_jour__bouton--refuser.activated{
+			-webkit-animation: disappear-gauche 300ms 100ms ease-in forwards;
+		}
+
+		.defi_du_jour__bouton--accepter.activated{
+			-webkit-animation: disappear-droite 300ms 100ms ease-in forwards;
+		}
+
+		@-webkit-keyframes appear{
+			0%{
+				-webkit-transform: translateY(0px);
+				opacity: 0;
+			}
+
+			70%{
+				opacity: 0;
+			}
+
+			100%{
+				-webkit-transform: translateY(-515px);
+				opacity: 1;
+			}
+		}
+
+		.bouton__photos_defi.activated{
+			-webkit-animation: appear 400ms 200ms ease-out forwards;
+		}
+
+		.photos_defi_du_jour.open{
+			-webkit-transform: translateY(-100%);
+		}
+
+		.defis.open{
+			-webkit-transform: scale(0);
+		}
+		
+
+/* FOOTER */
+footer {
+	height: 50px; 
+	background: white;
+	position: fixed;
+	bottom: 0;
+}
+
+
+/* MEDIA */
+@media (max-width: 600px) {
+	.banana { width: 300px; height: 400px; }
+}
+

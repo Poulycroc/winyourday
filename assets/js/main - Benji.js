@@ -1,9 +1,9 @@
-var accepter = document.getElementsByClassName("accepter_defi_jour"),
-	refuser = document.getElementsByClassName("refuser_defi_jour"),
-	photos = document.getElementsByClassName("bouton_photos_defi"),
+var accepter = document.getElementsByClassName("defi_du_jour__bouton--accepter"),
+	refuser = document.getElementsByClassName("defi_du_jour__bouton--refuser"),
+	photos = document.getElementsByClassName("bouton__photos_defi"),
 	photos_du_jour = document.getElementsByClassName("photos_defi_du_jour"),
-	defi_du_jour = document.getElementsByClassName("defi_du_jour_accueil");
-	bouton_retour = document.getElementsByClassName("bouton_retour")
+	defi_du_jour = document.getElementsByClassName("defis"),
+	bouton_retour = document.getElementsByClassName("photos_du_jour__header--retour");
 
 
 accepter[0].addEventListener("click", function(){
