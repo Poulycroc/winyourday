@@ -2,8 +2,9 @@ $(document).ready(function() {
 
 	// LOGIN
 
-	$(".noAccount, .alreadyAccount").click(function () {
-		$('.btn__login--connexion, .noAccount, .labelEmail, .mail, .btn__login--inscription, .alreadyAccount').toggleClass('hide');
+	$(".accountStatus").click(function () {
+		$('.mail').toggleClass('roll');
+		$('.accountStatus, .btn__login--connexion, .btn__login--inscription').toggleClass('slide');
 	});
 
 	

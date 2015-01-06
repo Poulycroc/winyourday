@@ -1,7 +1,7 @@
 @import url(font.css)  ;
 @import url(reset.css) ;
 
-body, html { height: 100%; }
+body, html { height: 100%; font-family: sans-serif; }
 body   { background: #999; }
 
 .warp { 
@@ -67,7 +67,7 @@ footer {
 
 	.page__profile {
     left: 320px;
-    transition: left 250ms ease-out;
+    transition: left 300ms ease-out;
 }
 
 		.displayed {
@@ -75,8 +75,8 @@ footer {
 	        z-index: 20;
 
 	        transform: scale(1);
-	        transition: left 250ms ease-out 100ms,
-	                    transform 200ms ease-out 250ms;
+	        transition: left 300ms ease-out 100ms,
+	                    transform 200ms ease-out 300ms;
 	    }
 
 	    /* PROFILE CONTENT */
@@ -131,18 +131,19 @@ footer {
     height: 480px;
     position: absolute;
     background: #f9f7f2;
+    overflow: hidden;
 
     z-index: 30;
 
     left: 320px;
-    transition: left 250ms ease-out, 
+    transition: left 300ms ease-out, 
                 transform 200ms ease-out;
 }
 
 	.active {
     left: 0;
     
-    transition: left 250ms ease-out;
+    transition: left 300ms ease-out;
     }
 
     .hidden {
@@ -150,15 +151,24 @@ footer {
 
         transform: scale(.9);
         transition: transform 200ms ease-out,
-                    left 250ms ease-out 200ms;
+                    left 300ms ease-out 200ms;
     }
 
 	/* LOGIN CONTENT */
 
+	.login__title {
+		margin-top: 70px;
+		font-size: 20pt;
+		text-align: center;
+		color: #999;
+	}
+
 	fieldset {
 		border: none;
-		margin-top: 120px;
+		margin: 50px auto;
 		padding: 0;
+
+		perspective: 500px;
 	}
 
 	label {
@@ -180,25 +190,92 @@ footer {
 	    color:    #999;
 		}
 
+		.mail {
+			visibility: hidden;
+			transform: rotateX(-90deg);
+			transform-origin: 50% -10px;
+			transition: transform 200ms ease-in, visibility 0 200ms;
+		}
+
+		.roll {
+		visibility: visible;
+		transform: rotateX(0deg);
+		transition: transform 200ms ease-out, visibility 0;
+		}
+
 	.btn__login {
 		display: block;
 		width: 160px;
 		height: 30px;
-		margin: 50px auto 20px auto;
-
-
+		margin: 0 auto 20px auto;
+		background: #0dbf9d;
+		color: #fff;
 	}
 
+		.btn__login--connexion {
+			transform: translateX(0);
+			transition: transform 200ms ease-out ;
+		}
+
+		.btn__login--connexion.slide {
+		transform: translateX(300px);
+		transition: transform 200ms ease-in ;
+		}
+
+		.btn__login--inscription {
+			position: relative;
+			top: -50px;
+			transform: translateX(-300px);
+			transition: transform 200ms ease-in ;
+		}
+
+		.btn__login--inscription.slide {
+		transform: translateX(0px);
+		transition: transform 200ms ease-out ;
+		}
+
+		.noAccount {
+			transform: translateX(0);
+			transition: transform 200ms ease-out 50ms;
+		}
+
+		.noAccount.slide {
+		transform: translateX(300px);
+		transition: transform 200ms ease-in 50ms;
+		}
+
+		.alreadyAccount {
+			transform: translateX(-300px);
+			transition: transform 200ms ease-in 50ms;
+		}
+
+		.alreadyAccount.slide {
+		transform: translateX(0px);
+		transition: transform 200ms ease-out 50ms;
+		}
+
+
+
 	.accountStatus {
+		position: relative;
+		top: -50px;
 	    display: block;
 	    text-align: center;
 	    color: #999;
+	    font-size: 10pt;
 	}
 
+		.alreadyAccount {
+			top: -65px;
+		}
+
 	.hide {
-    	display: none !important;
+    	margin:	0 !important;
+    	height: 0 !important;
+    	visibility: hidden;
 	}
 
 	/*
 	gris bg : #f9f7f2
 	vert: #0dbf9d
+	jaune: #fcc337
