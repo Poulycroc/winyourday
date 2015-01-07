@@ -11,14 +11,6 @@ $(document).ready(function() {
 
 // ANIMS
 
-	// PAGE SWITCH
-
-	$(".btn__next").on('click', function () {
-		event.preventDefault();
-	    $(this).parents('.page__profile').removeClass('displayed');
-	    $(this).parents('.page__profile').siblings('.page').addClass('displayed');
-	});
-
 	// PAGE SLIDE
 
 	$(".btn__loginOpen").on('click', function () {
