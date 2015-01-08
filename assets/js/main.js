@@ -20,15 +20,15 @@ $(document).ready(function() {
 		// testing the username value
 
 		if (username.value == ""){
-			$("#username").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+			$("#username").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #ffa72b");
 		}else{
 			if (username.value.length < 4){
-				$("#username").val("").attr("placeholder" , "C'est un peu court !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+				$("#username").val("").attr("placeholder" , "C'est un peu court !").css("box-shadow" , "0 0 3px 1px #ffa72b");
 			}else{
 				if (username.value.length > 20){
-					$("#username").val("").attr("placeholder" , "C'est un peu long !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+					$("#username").val("").attr("placeholder" , "C'est un peu long !").css("box-shadow" , "0 0 3px 1px #ffa72b");
 				}else{
-					$("#username").css("box-shadow" , "none");
+					$("#username").css("box-shadow" , "0 0 3px 1px #2fdaff");
 					flagUsername = 1;
 				}
 			}
@@ -37,15 +37,15 @@ $(document).ready(function() {
 		// testing the password value
 
 		if (password.value == ""){
-			$("#password").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+			$("#password").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #ffa72b");
 		}else{
 			if (password.value.length < 8){
-				$("#password").val("").attr("placeholder" , "C'est un peu court !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+				$("#password").val("").attr("placeholder" , "C'est un peu court !").css("box-shadow" , "0 0 3px 1px #ffa72b");
 			}else{
 				if (password.value.length > 25){
-					$("#password").val("").attr("placeholder" , "C'est un peu long !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+					$("#password").val("").attr("placeholder" , "C'est un peu long !").css("box-shadow" , "0 0 3px 1px #ffa72b");
 				}else{
-					$("#password").css("box-shadow" , "none");
+					$("#password").css("box-shadow" , "0 0 3px 1px #2fdaff");
 					flagPassword = 1;
 				}
 			}
@@ -55,12 +55,12 @@ $(document).ready(function() {
 
 		if ($(this).hasClass("btn__login--inscription")){
 			if (mail.value == ""){
-				$("#mail").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #2fdaff")
+				$("#mail").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #ffa72b")
 			}else{
 				if(mail.value.indexOf("@") == -1){
-					$("#mail").val("").attr("placeholder" , "Il faut un '@' !").css("box-shadow" , "0 0 3px 1px #2fdaff")
+					$("#mail").val("").attr("placeholder" , "Il faut un '@' !").css("box-shadow" , "0 0 3px 1px #ffa72b")
 				}else{
-					$("#mail").css("box-shadow" , "none");
+					$("#mail").css("box-shadow" , "0 0 3px 1px #2fdaff");
 					flagMail = 1;
 				}
 			}
