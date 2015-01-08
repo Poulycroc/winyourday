@@ -39,9 +39,6 @@ footer {
 	.banana { width: 300px; height: 400px; }
 }
 
-/* MY PART */
-
-/* FORMATTING BOXES WHEN INVALID */
 
 /* LOGIN */
 
@@ -192,6 +189,10 @@ footer {
 	    font-size: 10pt;
 	}
 
+		.accountStatus:active {
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+
 		.alreadyAccount {
 			top: -65px;
 		}
@@ -211,3 +212,5 @@ footer {
 	gris bg : #f9f7f2
 	vert: #0dbf9d
 	jaune: #fcc337
+	orange: #ffa72b
+	bleu: #2fdaff
