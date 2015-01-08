@@ -10,84 +10,72 @@ $(document).ready(function() {
 		password = document.getElementById("password");
 		mail = document.getElementById("mail");
 
-	// INSCRIPTION
+	// LOGIN TESTS
 
-	$(".btn__login--inscription").click( function (){
+	$(".btn__login").click( function (){
 
 		// testing the username value
-		
-		if (username.value.length >= 4 & username.value.length <= 20){
-			console.log("username ok")
-			localStorage.setItem("user", username.value);
-			flagUsername = 1;
+
+		if (username.value == null || username.value == ""){
+			$("#username").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #2fdaff");
 		}else{
-			$("#username").attr("placeholder", "I must be 4 to 20 charact.");
-		}
+			if (username.value.length < 4){
+				$("#username").val("").attr("placeholder" , "C'est un peu court !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+			}else{
+				if (username.value.length > 20){
+					$("#username").val("").attr("placeholder" , "C'est un peu long !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+				}else{
+					$("#username").css("box-shadow" , "none");
+					localStorage.setItem("user", username.value);
+					flagUsername = 1;
+				}
+			}
+		};
 
 		// testing the password value
-		if (password.value.length >= 8 & password.value.length <= 25){
-			console.log("password ok")
-			localStorage.setItem("password", password.value);
-			flagPassword = 1;
-		}
 
-		if (mail.value !== null || mail.value !== ""){
-			flagMail = 1;
-		}
+		if (password.value == null || password.value == ""){
+			$("#password").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+		}else{
+			if (password.value.length < 8){
+				$("#password").val("").attr("placeholder" , "C'est un peu court !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+			}else{
+				if (password.value.length > 25){
+					$("#password").val("").attr("placeholder" , "C'est un peu long !").css("box-shadow" , "0 0 3px 1px #2fdaff");
+				}else{
+					$("#password").css("box-shadow" , "none");
+					localStorage.setItem("user", password.value);
+					flagPassword = 1;
+				}
+			}
+		};
 
-		// checking if all fields are filled
-		if (flagUsername == 1 & flagPassword == 1 & flagMail == 1){
-			flagLoggedIn = 1
-			console.log("login complete")
-		}
+		// testing the mail value
 
+		if ($(".btn__login--inscription").click( function (){
+			if (mail.value == null || mail.value == ""){
+				$("#mail").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #2fdaff")
+			}else{
+				if(mail.value.indexOf("@") == -1){
+					$("#mail").val("").attr("placeholder" , 'Il faut un "@" !').css("box-shadow" , "0 0 3px 1px #2fdaff")
+				}else{
+					$("#mail").css("box-shadow" , "none");
+					flagMail = 1;
+				}
+			};
+
+			// checking if all fields are filled
+			if (flagUsername == 1 & flagPassword == 1 & flagMail == 1){
+				flagLoggedIn = 1;
+			}else{
+				flagUsername = 0;
+				flagPassword = 0;
+				flagMail = 0;
+			}
+		}));
 	});
 
-		// // VALIDATE PLUGIN
-
-		// $(".login__form").validate({
-		// 	rules: {
-		// 		username: {
-		// 			required: true,
-		// 			minlength: 4,
-		// 			maxlength: 20
-		// 	    }
-		// 	    password: {
-		// 			required: true,
-		// 			minlength: 4,
-		// 			maxlength: 20
-		// 	    }
-		// 	    mail: {
-		// 			required: true,
-		// 			email: true
-		// 	    }
-		// 	}
-
-		// 	messages: {
-		// 		username: {
-		// 			required: "Ce champ est requis",
-		// 			minlength: "Doit être 4 à 20 caract.",
-		// 			maxlength: "Doit être 4 à 20 caract."
-		// 		}
-		// 		password: {
-		// 			required: "Ce champ est requis",
-		// 			minlength: "Doit être 4 à 20 caract.",
-		// 			maxlength: "Doit être 4 à 20 caract."
-		// 		}
-		// 		mail: {
-		// 			required: "Ce champ est requis"
-		// 		}
-		// 	}
-
-		// });
-
-	// CONNEXION
-
-	// $(".btn__login--connexion").click( function(){
-
-	// 	localStorage.setItem("password", password.value);
-
-	// });
+		
 
 // ANIMS
 
