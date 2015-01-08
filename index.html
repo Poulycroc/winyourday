@@ -19,6 +19,8 @@
 
 	<script src="assets/js/jquery-1.11.1.min.js"></script>
 	<script src="assets/js/jquery-transit.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/localization/messages_fr.js"></script>
 </head>
 <body>
 
@@ -38,30 +40,31 @@
 
         	<h1 class="login__title">Hé t'es pas connecté !</h1>
            
-           <form action="#" method="post">
-              <fieldset>
-                <label for="username" class="labelUsername">Username</label>
-                <input type="text" name="username" id="username" placeholder="Username"/>
-                
-                <label for="password" class="labelPassword">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password"/>
+			<form method="post" class="login__form">
+				<fieldset>
+					<label for="username" class="labelUsername">Username</label>
+					<input type="text" name="username" id="username" placeholder="Username" required/>
+	                
+					<label for="password" class="labelPassword">Password</label>
+					<input type="password" name="password" id="password" placeholder="Password" required/>
 
-                <label for="mail" class="labelEmail hide">Email</label>
-              	<input type="email" name="mail" id="mail" class="mail" placeholder="Email"/>	
+					<label for="mail" class="labelEmail hide">Email</label>
+					<input type="email" name="mail" id="mail" class="mail" placeholder="Email" required/>	
 
-              </fieldset>
+				</fieldset>
               
-              <button class="btn btn__login btn__login--connexion">Connexion</button>
+				<button class="btn btn__login btn__login--connexion">Connexion</button>
 
-              <button class="btn btn__login btn__login--inscription">S'inscrire</button>
-              
-              <a href="#" class="accountStatus noAccount">Pas encore de compte ?</a>
+				<button class="btn btn__login btn__login--inscription">S'inscrire</button>
 
-              <a href="#" class="accountStatus alreadyAccount">Déjà un compte ?</a>
-              
-           </form>
+			</form>
+
+			<a href="#" class="accountStatus noAccount">Pas encore de compte ?</a>
+
+			<a href="#" class="accountStatus alreadyAccount">Déjà un compte ?</a>
+			
            
-       </section><!-- end login -->
+		</section><!-- end login -->
 		
 	</div><!-- end .warp -->
 	
