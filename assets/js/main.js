@@ -14,9 +14,12 @@ $(document).ready(function() {
 
 	$(".btn__login").click( function (){
 
+
+		event.preventDefault();
+
 		// testing the username value
 
-		if (username.value == null || username.value == ""){
+		if (username.value == ""){
 			$("#username").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #2fdaff");
 		}else{
 			if (username.value.length < 4){
@@ -33,7 +36,7 @@ $(document).ready(function() {
 
 		// testing the password value
 
-		if (password.value == null || password.value == ""){
+		if (password.value == ""){
 			$("#password").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #2fdaff");
 		}else{
 			if (password.value.length < 8){
@@ -50,27 +53,45 @@ $(document).ready(function() {
 
 		// testing the mail value
 
-		if ($(".btn__login--inscription").click( function (){
-			if (mail.value == null || mail.value == ""){
+		if ($(this).hasClass("btn__login--inscription")){
+			if (mail.value == ""){
 				$("#mail").val("").attr("placeholder" , "Ne m'oublie pas !").css("box-shadow" , "0 0 3px 1px #2fdaff")
 			}else{
 				if(mail.value.indexOf("@") == -1){
-					$("#mail").val("").attr("placeholder" , 'Il faut un "@" !').css("box-shadow" , "0 0 3px 1px #2fdaff")
+					$("#mail").val("").attr("placeholder" , "Il faut un '@' !").css("box-shadow" , "0 0 3px 1px #2fdaff")
 				}else{
 					$("#mail").css("box-shadow" , "none");
 					flagMail = 1;
 				}
-			};
+			}
+		};
 
 			// checking if all fields are filled
-			if (flagUsername == 1 & flagPassword == 1 & flagMail == 1){
-				flagLoggedIn = 1;
-			}else{
-				flagUsername = 0;
-				flagPassword = 0;
-				flagMail = 0;
-			}
-		}));
+			if ($(this).hasClass("btn__login--connexion")){
+				if (flagUsername == 1 & flagPassword == 1){
+					flagLoggedIn = 1;
+					// triggering the slide-out anim
+					$('.hidden').removeClass('hidden');
+			    	$('.login').removeClass('active');
+				}else{
+					flagUsername = 0;
+					flagPassword = 0;
+				}
+			};
+
+			if ($(this).hasClass("btn__login--inscription")){
+				if (flagUsername == 1 & flagPassword == 1 & flagMail == 1){
+					flagLoggedIn = 1;
+					// triggering the slide-out anim
+					$('.hidden').removeClass('hidden');
+			    	$('.login').removeClass('active');
+				}else{
+					flagUsername = 0;
+					flagPassword = 0;
+					flagMail = 0;
+				}
+			};
+		
 	});
 
 		
@@ -85,14 +106,6 @@ $(document).ready(function() {
 		event.preventDefault();
 	    $(this).parents('.page__profile').addClass('hidden');
 	    $('.login').addClass('active');
-	});
-
-	$(".btn__login").click( function () {
-		event.preventDefault();
-		if (flagLoggedIn == 1){
-		    $('.hidden').removeClass('hidden');
-		    $('.login').removeClass('active');
-		}
 	});
 
 	// LOGIN INSIDE PAGE
