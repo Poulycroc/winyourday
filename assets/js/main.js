@@ -26,7 +26,6 @@ $(document).ready(function() {
 					$("#username").val("").attr("placeholder" , "C'est un peu long !").css("box-shadow" , "0 0 3px 1px #2fdaff");
 				}else{
 					$("#username").css("box-shadow" , "none");
-					localStorage.setItem("user", username.value);
 					flagUsername = 1;
 				}
 			}
@@ -44,7 +43,6 @@ $(document).ready(function() {
 					$("#password").val("").attr("placeholder" , "C'est un peu long !").css("box-shadow" , "0 0 3px 1px #2fdaff");
 				}else{
 					$("#password").css("box-shadow" , "none");
-					localStorage.setItem("user", password.value);
 					flagPassword = 1;
 				}
 			}
